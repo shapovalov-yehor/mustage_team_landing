@@ -79,20 +79,24 @@ ul li::marker {
   justify-content: space-between;
 }
 
+.gap-4 {
+  gap: 4px !important;
+}
+
 .gap-8 {
-  gap: 8px;
+  gap: 8px !important;
 }
 
 .gap-16 {
-  gap: 16px;
+  gap: 16px !important;
 }
 
 .gap-24 {
-  gap: 24px;
+  gap: 24px !important;
 }
 
 .gap-32 {
-  gap: 32px;
+  gap: 32px !important;
 }
 
 .gap-40 {
@@ -170,7 +174,18 @@ ul li::marker {
 }
 
 .text-primary {
-  color: #5671ff;
+  color: #5671ff !important;
+}
+
+.text-primary-gradient {
+  background: linear-gradient(97.88deg, #3773ff 0%, #8c40ff 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.text-light {
+  color: #ffffff !important;
 }
 
 .icon-lg {
@@ -262,7 +277,7 @@ ul li::marker {
 
 .repeating-container {
   display: flex;
-  gap: 4px;
+  gap: 24px;
   overflow: hidden;
 }
 
@@ -273,6 +288,11 @@ ul li::marker {
   font-weight: 800;
   color: #5671ff99;
   white-space: nowrap;
+}
+
+.repeating-text::after {
+  content: "/";
+  margin-left: 24px;
 }
 
 .nav {
@@ -349,11 +369,22 @@ ul li::marker {
 }
 
 .link {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
   font-family: "Montserrat", serif;
   font-size: 16px;
   font-weight: 700;
   line-height: 24px;
   text-decoration: none;
+  color: #ffffff;
+}
+
+.link__nowrap {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .article {
@@ -547,7 +578,7 @@ ul li::marker {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  gap: 40px;
+  gap: 120px;
 }
 
 .community__card-ghost {
@@ -642,9 +673,273 @@ ul li::marker {
 
 .worth__card {
   flex: 1;
+  height: fit-content;
 }
 
 .worth__card-image {
   width: 128px;
   height: 128px;
+}
+
+.achievement {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.achievement__body {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+}
+
+.achievement__content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(4, auto);
+  row-gap: 40px;
+  column-gap: 32px;
+  z-index: 1;
+}
+
+.achievement__item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.achievement__panel {
+  position: relative;
+  width: 210px;
+  height: 450px;
+  border-radius: 25.24px;
+  background: linear-gradient(97.88deg, #3773ff 0%, #8c40ff 100%);
+}
+
+.achievement__image {
+  position: absolute;
+  top: -25px;
+  left: -150px;
+  width: 509px;
+  height: 509px;
+}
+
+.achievement__panel--relative {
+  position: relative;
+  left: 242px;
+  top: 0px;
+  height: 100%;
+  margin-right: -50vw;
+  border-radius: 32px;
+  background: #5671ff33;
+}
+
+.partner {
+}
+
+.partner__body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+.partner__content {
+  display: flex;
+  flex-direction: row;
+  gap: 32px;
+  width: 100%;
+}
+
+.partner__list {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  max-width: calc(100% / 2 - 16px);
+}
+
+.partner__item {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+.partner__image {
+  width: 122px;
+}
+
+.future {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.future__title {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.future__body {
+  display: flex;
+  flex-direction: row;
+  gap: 32px;
+}
+
+.future__panel {
+  justify-content: space-between;
+  width: 100%;
+}
+
+.future__panel-body {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.future__list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.future__item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
+}
+
+.future__item-icon {
+  width: 34px;
+  height: 34px;
+  padding: 5px;
+  border-radius: 100px;
+  background: #5671ff;
+  color: #ffffff;
+}
+
+.contact {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.contact__body {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 32px;
+  width: 100%;
+}
+
+.contact__image {
+  width: 565px;
+  height: 505px;
+}
+
+.contact__pill {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 24px 40px;
+  gap: 16px;
+  border-radius: 32px;
+  color: #fbfbfb;
+}
+
+.contact__pill-primary {
+  flex-direction: column;
+  align-items: flex-start;
+  background: linear-gradient(97.88deg, #3773ff 0%, #8c40ff 100%);
+}
+
+.contact__pill-secondary {
+  justify-content: space-between;
+  background: #5671ff;
+}
+
+.contact__list-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+}
+
+.contact__list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.column__icon-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 96px;
+  height: 48px;
+  border-radius: 24px;
+  background: #fbfbfb33;
+}
+
+.footer__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #fbfbfb;
+  padding: 60px 0px 120px 0px;
+  gap: 10px;
+  margin-top: -60px;
+}
+
+.footer {
+  gap: 55px;
+}
+
+.footer__body {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 32px;
+}
+
+.footer__panel {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 32px;
+  padding: 32px;
+  color: #fbfbfb;
+  background: linear-gradient(97.88deg, #5671ff 0%, #5671ff 100%);
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+  transition: background 300ms ease-in-out, box-shadow 300ms ease-in-out;
+}
+
+.footer__panel:hover {
+  background: linear-gradient(97.88deg, #3773ff 0%, #8c40ff 100%);
+  box-shadow: 0px 20px 31.4px -13px #373aff66;
+}
+
+.footer__image {
+  width: 40px;
+  height: 40px;
+}
+
+.footer__bottom {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 114px;
+  padding: 24px 10px;
+  gap: 10px;
+  background: linear-gradient(97.88deg, #3773ff 0%, #8c40ff 100%);
 }
