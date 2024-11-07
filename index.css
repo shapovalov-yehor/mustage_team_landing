@@ -735,6 +735,9 @@ ul li::marker {
 }
 
 .partner {
+  display: flex;
+  justify-content: center;
+  width: 100%;
 }
 
 .partner__body {
