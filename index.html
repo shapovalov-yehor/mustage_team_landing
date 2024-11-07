@@ -33,6 +33,12 @@
                 <a href="#achievements" class="nav__link"> Достижения в цифрах </a>
                 <a href="#contacts" class="nav__link"> Контакты </a>
               </nav>
+
+              <div class="menu-button">
+                <button id="menu-open" class="button button__icon">
+                  <i class="fi fi-sm fi-sr-menu-burger"></i>
+                </button>
+              </div>
             </div>
 
             <div class="header__body">
@@ -51,13 +57,34 @@
             <div class="repeating-text">mustage.team</div>
           </div>
         </div>
+
+        <div id="menu" class="menu">
+          <div class="menu__content">
+            <img class="header__logo" src="./assets/icons/logo.svg" alt="Logo" />
+
+            <nav class="menu-nav">
+              <a href="#about" class="menu__link"> Кто мы такие </a>
+              <a href="#ecosystem" class="menu__link"> Экосистема </a>
+              <a href="#community" class="menu__link"> Наша ценность для сообщества </a>
+              <a href="#principles" class="menu__link"> Наши принципы </a>
+              <a href="#achievements" class="menu__link"> Достижения в цифрах </a>
+              <a href="#contacts" class="menu__link"> Контакты </a>
+            </nav>
+          </div>
+
+          <div class="menu__action">
+            <button id="menu-close" class="button button__icon">
+              <i class="fi fi-sm fi-sr-cross"></i>
+            </button>
+          </div>
+        </div>
       </div>
     </header>
 
     <main>
       <article class="article">
         <section>
-          <div class="start">
+          <div class="container start">
             <a name="about" class="text-headline-1">С чего все началось</a>
 
             <div class="start__body">
@@ -133,11 +160,11 @@
         </section>
 
         <section>
-          <div class="container">
+          <div class="container way">
             <div class="text-headline-1 text-right">От аккаунтов к экосистеме</div>
 
             <div class="way__body">
-              <div class="panel">
+              <div class="panel way__panel">
                 <div class="panel__content">
                   <span class="text-body-1 text-primary"> Начав наш путь с продажи Facebook-аккаунтов, </span>
                   <span class="text-body-2">
@@ -286,7 +313,7 @@
         </section>
 
         <section>
-          <div class="container">
+          <div class="container community">
             <a name="community" class="text-headline-1" style="max-width: 1150px">
               <span> Наша ценность для сообщества или же </span>
               <span class="text-primary"> Mustage Community</span>
@@ -314,8 +341,8 @@
                 <div class="community__card-body">
                   <img class="community__card-image" src="./assets/icons/Frame 242.svg" alt="Customers" />
 
-                  <div class="column">
-                    <span class="text-headline-1">более 35,000</span>
+                  <div class="column w-100">
+                    <span class="text-headline-1 text-right">более 35,000</span>
                     <span class="text-body-2 text-bold text-right">Общее количество участников каналов </span>
                   </div>
                 </div>
@@ -330,7 +357,7 @@
         </section>
 
         <section>
-          <div class="container">
+          <div class="container media">
             <div class="row row__right">
               <span class="text-headline-1"> Медиа-присутствие </span>
             </div>
@@ -366,13 +393,13 @@
                   <div class="media__list-item">
                     <img class="media__list-item-icon" src="./assets/icons/robot (2) 1.svg" alt="Robot" />
 
-                    <div class="column gap-16">
+                    <div class="column gap-16 w-100">
                       <span class="text-body-2">
                         <strong>Мы разработали целую систему ботов</strong>, которая помогает нашим пользователям решать
                         повседневные задачи:
                       </span>
 
-                      <div class="column gap-24">
+                      <div class="column gap-24 w-100">
                         <ul class="column gap-8">
                           <li class="text-body-2">
                             Бот для уникализации креативов упростил работу с визуальным контентом
@@ -386,7 +413,7 @@
                             Полный список наших ботов вы можете увидеть по ссылке:
                           </span>
                           <a
-                            class="link text-primary"
+                            class="link text-primary link__ellipsis"
                             href="https://dawn-top-e5f.notion.site/1eee9955ca9d4c18bca3b0e67f2c92e7"
                             alt="Link"
                           >
@@ -409,14 +436,17 @@
 
         <section class="w-100">
           <div class="worth">
-            <div class="container">
-              <a name="principles" class="row row__align-center gap-16">
+            <div class="container worth__content">
+              <a name="principles" class="principles__title">
                 <span class="text-headline-1 text-nowrap">Наши ценности</span>
-                <div class="worth__image-wrapper">
-                  <i class="fi fi-sr-star"></i>
-                </div>
 
-                <hr class="worth__divider" />
+                <div class="principles__title-decorate">
+                  <div class="worth__image-wrapper">
+                    <i class="fi fi-sr-star"></i>
+                  </div>
+
+                  <hr class="worth__divider" />
+                </div>
               </a>
 
               <div class="worth__body">
@@ -476,8 +506,8 @@
         <section class="w-100">
           <div class="achievement">
             <div class="container w-100">
-              <a name="achievements" class="row row__right">
-                <span class="text-headline-1">Достижения в цифрах</span>
+              <a name="achievements" class="row row__right w-100">
+                <span class="text-headline-1 text-right">Достижения в цифрах</span>
               </a>
 
               <div class="achievement__body">
@@ -517,13 +547,15 @@
                     <span class="text-body-2">выпускников Academy</span>
                   </div>
 
-                  <button class="button button__primary" onclick="redirectToBot()">Начать работу с Mustage</button>
-                </div>
+                  <div class="achievement__item" style="align-items: center; margin-top: 16px">
+                    <button class="button button__primary" onclick="redirectToBot()">Начать работу с Mustage</button>
+                  </div>
 
-                <div class="achievement__panel">
-                  <img class="achievement__image" src="./assets/images/7.png" alt="Ruport image" />
+                  <div class="achievement__panel">
+                    <img class="achievement__image" src="./assets/images/7.png" alt="Ruport image" />
 
-                  <div class="achievement__panel--relative"></div>
+                    <div class="achievement__panel--relative"></div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -532,7 +564,7 @@
 
         <section class="w-100">
           <div class="partner">
-            <div class="container">
+            <div class="container partner__body-wrapper">
               <div class="text-headline-1">
                 Так же мы <span class="text-primary">активно сотрудничаем с другими сервисами </span> из ниши и помогаем
                 им приводить клиентов
@@ -623,7 +655,7 @@
                     <div class="partner__item">
                       <img class="partner__image" src="./assets/icons/Frame 51.svg" alt="Image proxy" />
 
-                      <div class="panel panel__light">
+                      <div class="panel panel__light gap-16">
                         <div class="column gap-16">
                           <span class="text-body-1">Сервис аренды мобильных прокси z-proxy.com</span>
                           <span class="text-body-2">
@@ -762,7 +794,7 @@
 
         <section class="w-100">
           <div class="contact">
-            <div class="container gap-4 w-100">
+            <div class="container contact__content">
               <a name="contacts" class="">
                 <span class="text-headline-1">Контакты</span>
               </a>
@@ -777,7 +809,7 @@
                         <img class="icon-md" src="./assets/icons/support 1.svg" alt="Creative support" />
                       </div>
 
-                      <div class="row gap-8">
+                      <div class="contact__pill-body">
                         <span class="text-body-2">Саппорт по креативам - </span>
                         <span class="text-body-2 text-bold">@mustage_creo</span>
                       </div>
@@ -788,7 +820,7 @@
                         <img class="icon-md" src="./assets/icons/support 1.svg" alt="Accounts support" />
                       </div>
 
-                      <div class="row gap-8">
+                      <div class="contact__pill-body">
                         <span class="text-body-2">Саппорт по аккаунтам - </span>
                         <span class="text-body-2 text-bold">@mustage_support</span>
                       </div>
@@ -799,7 +831,7 @@
                         <img class="icon-md" src="./assets/icons/support 1.svg" alt="Accounts support" />
                       </div>
 
-                      <div class="row gap-8">
+                      <div class="contact__pill-body">
                         <span class="text-body-2">Саппорт по прокси - </span>
                         <span class="text-body-2 text-bold">@mustage_proxy</span>
                       </div>
@@ -810,15 +842,15 @@
                         <img class="icon-md" src="./assets/icons/support 1.svg" alt="Accounts support" />
                       </div>
 
-                      <div class="column column__right gap-4">
-                        <span class="text-body-2">Куратор на бесплатном курсе по арбитражу трафика - </span>
+                      <div class="column column__right gap-4 w-100">
+                        <span class="text-body-2 text-right">Куратор на бесплатном курсе по арбитражу трафика - </span>
                         <span class="text-body-2 text-bold">@mustage_study</span>
                       </div>
                     </div>
                   </div>
                 </div>
 
-                <div class="column">
+                <div class="contact__advertisement">
                   <img class="contact__image" src="./assets/images/11.png" alt="Message image" />
 
                   <div class="contact__pill contact__pill-primary">

@@ -23,3 +23,38 @@ const countGraduate = document.getElementById("countGraduate");
 function redirectToBot() {
   window.location.href = "";
 }
+
+// Menu
+
+const menuModal = document.getElementById("menu");
+const openModalBtn = document.getElementById("menu-open");
+const closeModal = document.getElementById("menu-close");
+const links = document.querySelectorAll(".menu__link");
+
+links.forEach((link) => {
+  link.addEventListener("click", () => {
+    closeMenu();
+  });
+});
+
+openModalBtn.addEventListener("click", () => {
+  menuModal.classList.add("menu--active");
+  openModalBtn.style.display = "none";
+  document.body.style.overflow = "hidden";
+});
+
+closeModal.addEventListener("click", () => {
+  closeMenu();
+});
+
+window.addEventListener("click", (e) => {
+  if (e.target === modal) {
+    closeMenu();
+  }
+});
+
+function closeMenu() {
+  menuModal.classList.remove("menu--active");
+  openModalBtn.style.display = "flex";
+  document.body.style.overflow = "";
+}
