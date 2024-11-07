@@ -35,7 +35,7 @@
               </nav>
 
               <div class="menu-button">
-                <button id="menu-open" class="button button__icon">
+                <button id="menu-open" class="button button__icon" aria-label="Open menu">
                   <i class="fi fi-sm fi-sr-menu-burger"></i>
                 </button>
               </div>
@@ -73,7 +73,7 @@
           </div>
 
           <div class="menu__action">
-            <button id="menu-close" class="button button__icon">
+            <button id="menu-close" class="button button__icon" aria-label="Close menu">
               <i class="fi fi-sm fi-sr-cross"></i>
             </button>
           </div>
@@ -148,7 +148,9 @@
                 </div>
 
                 <div class="start__button-wrapper">
-                  <button class="button button__primary" onclick="redirectToBot()">Начать работу с Mustage</button>
+                  <button class="button button__primary" onclick="redirectToBot()" aria-label="Начать работу с Mustage">
+                    Начать работу с Mustage
+                  </button>
                 </div>
               </div>
 
@@ -226,7 +228,13 @@
                   </div>
 
                   <div class="row row__right">
-                    <button class="button button__primary">Перейти к продукту</button>
+                    <button
+                      class="button button__primary"
+                      aria-label="Перейти в Mustage Store"
+                      onclick="window.location.href='https://mustage.site/'"
+                    >
+                      Перейти к продукту
+                    </button>
                   </div>
                 </div>
 
@@ -245,7 +253,13 @@
                   </div>
 
                   <div class="row row__right">
-                    <button class="button button__primary">Перейти к продукту</button>
+                    <button
+                      class="button button__primary"
+                      aria-label="Перейти в Mustage Proxy"
+                      onclick="window.location.href='https://proxy.mustage.io/'"
+                    >
+                      Перейти к продукту
+                    </button>
                   </div>
                 </div>
 
@@ -265,7 +279,13 @@
                   </div>
 
                   <div class="row row__right">
-                    <button class="button button__primary">Перейти к продукту</button>
+                    <button
+                      class="button button__primary"
+                      aria-label="Перейти в Mustage Creo"
+                      onclick="window.location.href='https://mustage.io/creo'"
+                    >
+                      Перейти к продукту
+                    </button>
                   </div>
                 </div>
 
@@ -285,7 +305,13 @@
                   </div>
 
                   <div class="row row__right">
-                    <button class="button button__primary">Перейти к продукту</button>
+                    <button
+                      class="button button__primary"
+                      aria-label="Перейти в Mustage Academy"
+                      onclick="window.location.href='https://mustage.io/course'"
+                    >
+                      Перейти к продукту
+                    </button>
                   </div>
                 </div>
 
@@ -304,7 +330,13 @@
                   </div>
 
                   <div class="row row__right">
-                    <button class="button button__primary">Перейти к продукту</button>
+                    <button
+                      class="button button__primary"
+                      aria-label="Перейти в Mustage Service bot"
+                      onclick="window.location.href='https://t.me/mustage_service_bot'"
+                    >
+                      Перейти к продукту
+                    </button>
                   </div>
                 </div>
               </div>
@@ -427,7 +459,9 @@
                 </div>
 
                 <div class="row row__right">
-                  <button class="button button__primary" onclick="redirectToBot()">Начать работу с Mustage</button>
+                  <button class="button button__primary" aria-label="Начать работу с Mustage" onclick="redirectToBot()">
+                    Начать работу с Mustage
+                  </button>
                 </div>
               </div>
             </div>
@@ -495,7 +529,7 @@
                   </div>
                 </div>
 
-                <button class="button button__light" onclick="redirectToBot()">
+                <button class="button button__light" aria-label="Начать работу с Mustage" onclick="redirectToBot()">
                   <span class="button__light-title">Начать работу с Mustage</span>
                 </button>
               </div>
@@ -547,8 +581,14 @@
                     <span class="text-body-2">выпускников Academy</span>
                   </div>
 
-                  <div class="achievement__item" style="align-items: center; margin-top: 16px">
-                    <button class="button button__primary" onclick="redirectToBot()">Начать работу с Mustage</button>
+                  <div class="achievement__item" style="align-items: center; margin-top: 16px; z-index: 1">
+                    <button
+                      class="button button__primary"
+                      aria-label="Начать работу с Mustage"
+                      onclick="redirectToBot()"
+                    >
+                      Начать работу с Mustage
+                    </button>
                   </div>
 
                   <div class="achievement__panel">
@@ -729,7 +769,9 @@
                   </div>
                 </div>
 
-                <button class="button button__primary" onclick="redirectToBot()">Начать работу с Mustage</button>
+                <button class="button button__primary" aria-label="Начать работу с Mustage" onclick="redirectToBot()">
+                  Начать работу с Mustage
+                </button>
               </div>
             </div>
           </div>
@@ -784,7 +826,13 @@
                   </div>
 
                   <div class="row row__right">
-                    <button class="button button__primary" onclick="redirectToBot()">Начать работу с Mustage</button>
+                    <button
+                      class="button button__primary"
+                      aria-label="Начать работу с Mustage"
+                      onclick="redirectToBot()"
+                    >
+                      Начать работу с Mustage
+                    </button>
                   </div>
                 </div>
               </div>
@@ -873,35 +921,35 @@
           </div>
 
           <div class="footer__body">
-            <a class="footer__panel" href="" alt="Facebook accaunts">
+            <a class="footer__panel" href="https://mustage.site/" alt="Facebook accaunts">
               <span class="text-body-1">Аккаунты Facebook для запуска рекламы</span>
               <dic class="row row__right">
                 <img class="footer__image" src="./assets/icons/profile-user 1.svg" alt="Profile" />
               </dic>
             </a>
 
-            <a class="footer__panel" href="" alt="Proxy">
+            <a class="footer__panel" href="https://proxy.mustage.io/" alt="Proxy">
               <span class="text-body-1"> Украинские мобильные прокси ($35/мес) </span>
               <dic class="row row__right">
                 <img class="footer__image" src="./assets/icons/connected 1.svg" alt="Connected" />
               </dic>
             </a>
 
-            <a class="footer__panel" href="" alt="Accademy">
+            <a class="footer__panel" href="https://mustage.io/course" alt="Accademy">
               <span class="text-body-1">Бесплатное обучение арбитражу трафика</span>
               <dic class="row row__right">
                 <img class="footer__image" src="./assets/icons/graduation 1.svg" alt="Graduation" />
               </dic>
             </a>
 
-            <a class="footer__panel" href="" alt="Creo">
+            <a class="footer__panel" href="https://mustage.io/creo" alt="Creo">
               <span class="text-body-1">Заказать креативы для арбитража (разные вертикали)</span>
               <dic class="row row__right">
                 <img class="footer__image" src="./assets/icons/camera 1.svg" alt="Camera" />
               </dic>
             </a>
 
-            <a class="footer__panel" href="" alt="Creo portfolio">
+            <a class="footer__panel" href="https://t.me/mustage_portfolio" alt="Creo portfolio">
               <span class="text-body-1">Портфолио с креативами</span>
               <dic class="row row__right">
                 <img class="footer__image" src="./assets/icons/portfolio 1.svg" alt="Portfolio" />
@@ -922,14 +970,14 @@
               </dic>
             </a>
 
-            <a class="footer__panel" href="" alt="Telegram chat">
+            <a class="footer__panel" href="https://t.me/+4oFlq242zzszZmQ6" alt="Telegram chat">
               <span class="text-body-1">Наш чат в Telegram</span>
               <dic class="row row__right">
                 <img class="footer__image" src="./assets/icons/telegram (2) 2.svg" alt="Telegram" />
               </dic>
             </a>
 
-            <a class="footer__panel" href="" alt="Instagram">
+            <a class="footer__panel" href="https://www.instagram.com/mustage.team/" alt="Instagram">
               <span class="text-body-1">Наш Instagram</span>
               <dic class="row row__right">
                 <img class="footer__image" src="./assets/icons/instagram (1) 1.svg" alt="Instagram" />
