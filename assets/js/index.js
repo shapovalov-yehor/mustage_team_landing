@@ -19,3 +19,7 @@ repeatContainers.forEach((repeatContainer, index) => {
 const countViews = document.getElementById("countView");
 const countBotUsers = document.getElementById("countBotUsers");
 const countGraduate = document.getElementById("countGraduate");
+
+function redirectToBot() {
+  window.location.href = "";
+}
