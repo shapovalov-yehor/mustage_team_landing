@@ -21,12 +21,15 @@ const countBotUsers = document.getElementById("countBotUsers");
 const countGraduate = document.getElementById("countGraduate");
 
 function redirectToBot() {
-  window.location.href = "";
+  window.location.href = "https://t.me/usaffiliate";
 }
 
-function redirectToPresentation() {
-  window.location.href = "./assets/presentation.pdf";
-}
+const pdfLinks = document.querySelectorAll(".link__pdf");
+
+pdfLinks.forEach((link) => {
+  link.href =
+    "https://drive.google.com/viewerng/viewer?embedded=true&url=https://shapovalov-yehor.github.io/mustage_team_landing/assets/presentation.pdf";
+});
 
 // Menu
 
