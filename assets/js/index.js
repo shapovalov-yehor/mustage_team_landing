@@ -3,7 +3,7 @@ const repeatText = document.querySelector(".repeating-text");
 const text = "mustage.team";
 
 const windowWidth = window.innerWidth;
-const repeatCount = windowWidth / 195;
+const repeatCount = Math.ceil(windowWidth / 195) + 2;
 /**
  * TODO: Fix this
  */
@@ -16,9 +16,41 @@ repeatContainers.forEach((repeatContainer, index) => {
   }
 });
 
+// Get data from API
+
 const countViews = document.getElementById("countView");
 const countBotUsers = document.getElementById("countBotUsers");
 const countGraduate = document.getElementById("countGraduate");
+
+fetch("http://185.233.118.169:8666/all/users_count")
+  .then((response) => {
+    if (!response.ok) {
+      throw new Error("Network error");
+    }
+    return response.json();
+  })
+  .then((data) => {
+    countBotUsers.innerText = data.total + "+";
+  })
+  .catch((error) => {
+    console.error("Error: ", error);
+    countBotUsers.innerText = "5863+";
+  });
+
+fetch("http://185.233.118.169:8666/course/students_count")
+  .then((response) => {
+    if (!response.ok) {
+      throw new Error("Network error");
+    }
+    return response.json();
+  })
+  .then((data) => {
+    countGraduate.innerText = data.total_students + "+";
+  })
+  .catch((error) => {
+    console.error("Error: ", error);
+    countGraduate.innerText = "2991+";
+  });
 
 function redirectToBot() {
   window.location.href = "https://t.me/usaffiliate";

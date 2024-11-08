@@ -278,23 +278,38 @@ ul li::marker {
 }
 
 .repeating-container {
-  display: flex;
-  gap: 24px;
+  display: inline-block;
+  white-space: nowrap;
   overflow: hidden;
+  width: 100%;
 }
 
 .repeating-text {
+  display: inline-block;
   font-family: "Montserrat", serif;
   font-size: 23px;
   line-height: 23px;
   font-weight: 800;
   color: #5671ff99;
   white-space: nowrap;
+  display: inline-block;
+  animation: run 10s linear infinite;
+  will-change: transform;
+  margin-right: 24px;
 }
 
 .repeating-text::after {
   content: "/";
   margin-left: 24px;
+}
+
+@keyframes run {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-100% - 24px));
+  }
 }
 
 .nav {
@@ -1078,18 +1093,24 @@ ul li::marker {
     line-height: 19.5px;
   }
 
-  .repeating-container {
-    gap: 16px;
-  }
-
   .repeating-text {
     font-size: 16px;
     line-height: 16px;
+    animation: run-small 5s linear infinite;
+    margin-right: 16px;
   }
 
   .repeating-text::after {
-    content: "/";
     margin-left: 16px;
+  }
+
+  @keyframes run-small {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(-100% - 16px));
+    }
   }
 
   .image-wrapper {
