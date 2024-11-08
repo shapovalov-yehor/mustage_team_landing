@@ -24,6 +24,10 @@ function redirectToBot() {
   window.location.href = "";
 }
 
+function redirectToPresentation() {
+  window.location.href = "./assets/presentation.pdf";
+}
+
 // Menu
 
 const menuModal = document.getElementById("menu");
