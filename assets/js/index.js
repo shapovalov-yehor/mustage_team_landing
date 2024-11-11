@@ -22,6 +22,22 @@ const countViews = document.getElementById("countView");
 const countBotUsers = document.getElementById("countBotUsers");
 const countGraduate = document.getElementById("countGraduate");
 
+// TODO: fix this when finished api endpoint
+fetch("")
+  .then((response) => {
+    if (!response.ok) {
+      throw new Error("Network error");
+    }
+    return response.json();
+  })
+  .then((data) => {
+    countViews.innerText = data.total + "+";
+  })
+  .catch((error) => {
+    // console.error("Error: ", error);
+    countViews.innerText = "40563+";
+  });
+
 fetch("http://185.233.118.169:8666/all/users_count")
   .then((response) => {
     if (!response.ok) {
